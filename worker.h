@@ -1,3 +1,4 @@
+#include<stdio.h>
 float sum2(float a, float b){
 	float sum=a+b;
 	return sum;
@@ -28,4 +29,32 @@ void swap(float *a, float *b){
 	float temp=*a;
 	*a=*b;
 	*b=temp;
+}
+int fact(int a){
+	if(a==1){
+		return 1;
+	}
+	else {
+		return a*fact(a-1);
+	}
+	
+}
+void ar(int a[50]){
+	int i,n;
+	printf("Enter limit:\n");
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+		printf("enter a  number: \n");
+		scanf("%d",&a[i]);
+	}
+	printf("Entered array is: \n");
+	for(i=0;i<n;i++){
+		printf("%d\n",a[i]);
+	}
+	
+}
+int len_str(char a[100]){
+	int i;
+	for(i=0;a[i]!='\0';i++);
+	return i;
 }
